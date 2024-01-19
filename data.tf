@@ -18,7 +18,7 @@ data "terraform_remote_state" "alb" {
   }
 }
 
-£Retrieves the information from the remote db file
+#Retrieves the information from the remote db file
 data "terraform_remote_state" "db" {
   backend  = "s3"
   config = {
