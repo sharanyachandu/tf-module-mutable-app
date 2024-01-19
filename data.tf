@@ -27,3 +27,10 @@ data "terraform_remote_state" "db" {
     region = "us-east-1"
   }
 }
+
+# Fetches the information of the LAB AMI
+data "aws_ami" "ami" {
+  most_recent      = true
+  name_regex       = "Lab-Ami-With-Ansible_Installed"
+  owners           = ["self"] 
+}
