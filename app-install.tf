@@ -13,7 +13,7 @@ resource "null_resource" "app" {
         }
 
         inline = [
-            "ansible-pull -U https://github.com/b53-clouddevops/ansible.git robot-pull.yml -e MONGODB_ENDPOINT=${data.terraform_remote_state.db.outputs.MONGODB_ENDPOINT} -e ENV=${var.ENV} -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION}"
+            "ansible-pull -U https://github.com/sharanyachandu/ansible.git robot-pull.yml -e MONGODB_ENDPOINT=${data.terraform_remote_state.db.outputs.MONGODB_ENDPOINT} -e ENV=${var.ENV} -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION}"
         ]
     }
 } 
